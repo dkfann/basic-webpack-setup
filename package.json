@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "webpack-dev-server --mode=development"
+    "start:dev": "webpack-dev-server --mode development",
+    "build": "webpack -p",
+    "dev": "webpack --mode developement"
   },
   "author": "",
   "license": "ISC",
@@ -25,7 +27,6 @@
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.4.3",
-    "style-loader": "^0.23.0",
-    "url-loader": "^1.1.1"
+    "style-loader": "^0.23.0"
   }
 }
