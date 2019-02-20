@@ -1,4 +1,14 @@
+@font-face {
+    font-family: 'Inter Bold';
+    src: url('../assets/fonts/Inter-Bold.otf');
+}
+@font-face {
+    font-family: 'Akzidenz Grotesk Bold';
+    src: url('../assets/fonts/AGNextBold.otf');
+}
+
 body {
+    font-family: 'Inter Bold';
     margin: 0;
 }
 
@@ -12,4 +22,32 @@ body {
     grid-template-areas:
         "header header header header"
         "main main main main";
+}
+
+.main-section {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Akzidenz Grotesk Bold';
+    flex-direction: column;
+}
+
+.main-title {
+    font-size: 6rem;
+    grid-area: main;
+    color: rgb(255, 189, 34);
+}
+
+.main-subtitle {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: rgb(253, 95, 98);
+}
+
+.subtitle {
+    font-size: 2rem;
+    margin: 0 0.5rem 0 0.5rem;
 }
