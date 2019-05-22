@@ -22,7 +22,6 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Inter Bold';
-    // font-family: 'Akzidenz Grotesk Bold';
 }
 
 .main-section {
@@ -31,18 +30,8 @@ body {
     align-items: center;
     flex-direction: column;
     margin-top: 2rem;
-    // font-family: 'Akzidenz Grotesk Bold';
 }
 
-.main-title {
-    font-size: 6rem;
-    color: rgb(255, 189, 34);
-    // font-family: 'Akzidenz Grotesk Bold';
-
-    @media screen and (max-width: 768px) {
-        font-size: 4rem;
-    }
-}
 
 .main-subtitle {
     display: flex;
@@ -53,12 +42,28 @@ body {
 }
 
 .subtitle {
-    font-size: 1.5rem;
+    font-size: 1vw;
     margin: 0 0.5rem 0 0.5rem;
     font-family: 'Akzidenz Grotesk Italic';
 
-    @media screen and (max-width: 768px) {
-        font-size: 1.25rem;
+    @media screen and (max-width: 1680px) {
+        font-size: 1.5vw;
+    }
+
+    @media screen and (max-width: 1130px) {
+        font-size: 1.75vw;
+    }
+
+    @media screen and (max-width: 870px) {
+        font-size: 2vw;
+    }
+
+    @media screen and (max-width: 690px) {
+        font-size: 2.5vw;
+    }
+
+    @media screen and (max-width: 536px) {
+        font-size: 2.75vw;
     }
 }
 
@@ -75,14 +80,26 @@ body {
     margin-left: 30vw;
     margin-bottom: 1.5rem;
     width: 40vw;
-}
 
-// .project-title {
-//     font-size: 4rem;
-//     color: #005796e3;
-//     text-align: center;
-//     font-family: 'Akzidenz Grotesk Bold';
-// }
+    @media screen and (max-width: 1680px) {
+        width: 60vw;
+        margin-left: 20vw;
+    }
+
+    @media screen and (max-width: 1130px) {
+        width: 70vw;
+        margin-left: 15vw;
+    }
+
+    @media screen and (max-width: 870px) {
+        width: 80vw;
+        margin-left: 10vw;
+    }
+
+    @media screen and (max-width: 690px) {
+        flex-direction: column;
+    }
+}
 
 .project-subtitle {
     display: flex;
@@ -90,36 +107,106 @@ body {
     justify-content: center;
     padding: 0;
     font-family: 'Akzidenz Grotesk Italic';
-    font-size: 1.5rem;
+    font-size: 1vw;
     margin: 0;
 
     li {
         margin-left: 1rem;
         color: #024870e3;
     }
+
+    @media screen and (max-width: 1680px) {
+        font-size: 1.5vw;
+    }
+
+    @media screen and (max-width: 1130px) {
+        font-size: 1.75vw;
+    }
+
+    @media screen and (max-width: 870px) {
+        font-size: 2vw;
+    }
+
+    @media screen and (max-width: 690px) {
+        font-size: 2.5vw;
+    }
+
+    @media screen and (max-width: 536px) {
+        font-size: 3.5vw;
+    }
 }
 
 .project-title,
 .main-title {
-    font-size: 4rem;
+    font-size: 2.5vw;
     color: transparent;
     -webkit-text-stroke: 2px #9b7200;
     text-transform: uppercase;
     position: absolute;
     white-space: nowrap;
     text-decoration: none;
+
+    @media screen and (max-width: 1680px) {
+        font-size: 3.5vw;
+    }
+
+    @media screen and (max-width: 1130px) {
+        font-size: 4.5vw;
+    }
+
+    @media screen and (max-width: 870px) {
+        font-size: 4.75vw;
+    }
+
+    @media screen and (max-width: 690px) {
+        font-size: 6vw;
+    }
+
+    @media screen and (max-width: 536px) {
+        font-size: 7.25vw;
+    }
 }
 
 .project-title-shadow,
 .main-title-shadow {
-    font-size: 4rem;
+    font-size: 2.5vw;
     color: #ffe13a;
     text-transform: uppercase;
     position: relative;
-    top: 3px;
-    left: -4px;
+    top: 0.10vw;
+    left: -0.15vw;
     z-index: -1;
     white-space: nowrap;
+
+    @media screen and (max-width: 1680px) {
+        font-size: 3.5vw;
+        top: 0.25vw;
+        left: -0.20vw;
+    }
+
+    @media screen and (max-width: 1130px) {
+        font-size: 4.5vw;
+        top: 0.3vw;
+        left: -0.275vw;
+    }
+
+    @media screen and (max-width: 870px) {
+        font-size: 4.75vw;
+        top: 0.3vw;
+        left: -0.275vw;
+    }
+
+    @media screen and (max-width: 690px) {
+        font-size: 6vw;
+        top: 0.35vw;
+        left: -0.3vw;
+    }
+    
+    @media screen and (max-width: 536px) {
+        font-size: 7.25vw;
+        top: 0.5vw;
+        left: -0.45vw;
+    }
 }
 
 .section-underline {
