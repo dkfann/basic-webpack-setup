@@ -13,6 +13,17 @@
     src: url('../assets/fonts/AGNextIta.otf');
 }
 
+@font-face {
+    font-family: 'Garnett Medium Italic';
+    src: url('../assets/fonts/GarnettMedItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Founder Medium';
+    src: url('../assets/fonts/FounderMed.otf');
+}
+
+
 body {
     margin: 0;
     background-color: #faf6eb;
@@ -160,6 +171,7 @@ body {
 
     @media screen and (max-width: 690px) {
         font-size: 6vw;
+        -webkit-text-stroke: 1px #9b7200;
     }
 
     @media screen and (max-width: 536px) {
@@ -213,5 +225,11 @@ body {
     border-bottom: 2px solid red;
 }
 
-.project-title { -webkit-text-stroke: 2px #843405; }
+.project-title {
+    -webkit-text-stroke: 2px #843405;
+
+    @media screen and (max-width: 690px) {
+        -webkit-text-stroke: 1px #843405;
+    }
+}
 .project-title-shadow { color: #ff926d; }
