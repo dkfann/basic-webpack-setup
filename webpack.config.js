@@ -22,16 +22,29 @@ module.exports = {
         port: 8085,
     },
 
+    resolve: {
+        alias: {
+            components: path.resolve(__dirname, 'app/src/components'),
+        },
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
+    },
+
     // MODULE LOADERS
     module: {
         rules: [
-            // Transpile JS using babel loader
+            // Transpile JS(X)/TS(X) using babel loader
             {
-                test: /\.js$/,
+                test: /\.(j|t)sx?$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
                 },
+            },
+            // Output .js files will have sourcemaps reprocessed by source-map-loader
+            {
+                test: /\.js$/,
+                loader: 'source-map-loader',
+                enforce: 'pre',
             },
             // Compile less to css
             {
@@ -79,7 +92,7 @@ module.exports = {
             filename: 'index.html',
         }),
         new CopyPlugin([
-            { from: '.app/src/assets/images', to: 'assets/images' }
+            { from: './app/src/assets/images', to: 'assets/images' }
         ])
     ],
 };
