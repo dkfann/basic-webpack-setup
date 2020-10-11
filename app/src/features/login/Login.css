@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Canela Regular';
+    src: url(../../assets/fonts/Canela-Regular.otf);
+}
+
+.home {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: 'Canela Regular';
+}
+
+.title {
+    font-size: 8rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+}

@@ -1,9 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { Hello } from 'components/Hello';
+import { Routes } from 'features/routes/Routes'
+
 
 ReactDOM.render(
-    <Hello test="hello" />,
+    <Routes />,
     document.getElementById('app')
 );

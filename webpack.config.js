@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
     entry: [
@@ -19,12 +20,15 @@ module.exports = {
     devServer: {
         publicPath: '/',
         contentBase: path.join(__dirname, 'app/src/'),
+        historyApiFallback: true,
         port: 8085,
+        overlay: true,
     },
 
     resolve: {
         alias: {
-            components: path.resolve(__dirname, 'app/src/components'),
+            features: path.resolve(__dirname, 'app/src/features'),
+            shared: path.resolve(__dirname, 'app/src/shared')
         },
         extensions: ['.js', '.jsx', '.ts', '.tsx']
     },
@@ -48,12 +52,20 @@ module.exports = {
             },
             // Compile less to css
             {
-                test: /\.less$/,
+                test: /\.((c|sa|sc)ss)$/i,
                 use: [
                     'style-loader',
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'less-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1,
+                            modules: {
+                                auto: true,
+                            },
+                        },
+                    }
+                    // MiniCssExtractPlugin.loader,
+                    // 'css-loader',
                 ],
             },
             {
@@ -93,6 +105,9 @@ module.exports = {
         }),
         new CopyPlugin([
             { from: './app/src/assets/images', to: 'assets/images' }
-        ])
+        ]),
+        new Dotenv({
+            path: './.env',
+        })
     ],
 };
