@@ -1,0 +1,8 @@
+.post_container {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 50vw;
+    background-color: orange;
+}
