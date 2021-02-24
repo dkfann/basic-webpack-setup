@@ -1,7 +1,10 @@
 import React from 'react'
+import { GithubFollowers } from 'features/github/GithubFollowers'
 
 export function Home() {
     return (
-        <div>Homepage</div>
+        <div>
+            <GithubFollowers />
+        </div>
     )
 }

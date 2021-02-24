@@ -1,0 +1,30 @@
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.pagination {
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: center;
+    grid-gap: 1rem;
+}
+
+.follower_list {
+    display: grid;
+    place-content: center;
+    grid-gap: 1rem;
+}
+
+.follower {
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
+}
+
+.avatar {
+    width: 100px;
+}
