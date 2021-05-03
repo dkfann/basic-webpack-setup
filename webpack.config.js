@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
 
 
 module.exports = {
@@ -15,14 +16,13 @@ module.exports = {
 
     target: 'web',
 
-    devtool: 'eval-source-map',
+    devtool: 'cheap-module-source-map',
 
     devServer: {
         publicPath: '/',
         contentBase: path.join(__dirname, 'app/src/'),
         historyApiFallback: true,
         port: 8085,
-        overlay: true,
     },
 
     resolve: {
@@ -99,5 +99,6 @@ module.exports = {
             template: './app/src/index.html',
             filename: 'index.html',
         }),
+        new ErrorOverlayPlugin(),
     ]
 }
